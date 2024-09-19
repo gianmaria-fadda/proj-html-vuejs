@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
-@mixin default-color {
-    color: $mainColor;
+@mixin text-decoration-none-rule {
+    text-decoration: none;
 }
 
 @mixin font-size-rule {

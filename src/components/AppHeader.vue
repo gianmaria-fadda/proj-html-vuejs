@@ -35,8 +35,8 @@ export default {
     
     <div class="container">
       <div class="row">
-        <div class="col">
-          <a href="#">HOME</a>
+        <div class="col pb-3">
+          <a class="ps-0" href="#">HOME</a>
           <a href="#">ELEMENTS</a>
           <a href="#">FEATURES</a>
           <a href="#">PAGES</a>
@@ -44,8 +44,8 @@ export default {
           <a href="#">BLOG</a>
           <a href="#">SHOP</a>
         </div>
-        <div class="col">
-          
+        <div class="col text-end">
+          <i class="fa-solid fa-magnifying-glass"></i>  
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@ header {
 
   .bg {
 
-    background-color: #0088CC;
+    background-color: $blueColor;
     .container {
 
       .row {
@@ -78,7 +78,7 @@ header {
           a {
 
             color: white;
-            text-decoration: none;
+            @include text-decoration-none-rule;
             @include font-size-rule;
             padding: 0 10px;
           }
@@ -93,6 +93,28 @@ header {
     img {
 
       max-width: 100px;
+    }
+  }
+
+  .container {
+
+
+    a {
+
+      @include text-decoration-none-rule;
+      padding: 0 15px;
+      color: #4A5054;
+      font-weight: bold;
+
+      &:first-child {
+
+        color: $blueColor;
+      }
+    }
+
+    i {
+
+      cursor: pointer;
     }
   }
 }
