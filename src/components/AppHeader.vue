@@ -1,7 +1,7 @@
 <script>
 export default {
   data() {
-    return { 
+    return {
       message: 'Template Vite + Vue'
     }
   }
@@ -10,9 +10,45 @@ export default {
 
 <template>
   <header>
-    <h1>
-      {{ message }}
-    </h1>
+    <div class="bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 pe-0">
+            <p class="m-0 p-0 d-inline-block">
+              Everithing about Lifestyle, Travel and Gadgets!
+            </p>
+          </div>
+          <div class="col ps-0">
+            <a class="ps-0" href="#">SIGN IN</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT US</a>
+            <a href="#">BUY NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-4">
+      <img src="/public/img/logo-default-slim.png" alt="logo-default-slim">
+    </div>
+
+    <hr class="text-body-secondary">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="#">HOME</a>
+          <a href="#">ELEMENTS</a>
+          <a href="#">FEATURES</a>
+          <a href="#">PAGES</a>
+          <a href="#">PORTFOLIO</a>
+          <a href="#">BLOG</a>
+          <a href="#">SHOP</a>
+        </div>
+        <div class="col">
+          
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -20,12 +56,44 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 
 header {
-  background-color: $mainBgColor;
-  text-align: center;
-  padding: 20px 0;
-}
 
-h1 {
-  color: $mainColor;
+  .bg {
+
+    background-color: #0088CC;
+    .container {
+
+      .row {
+        
+        padding: 10px 0;
+        .col-3 {
+
+          p {
+
+            color: #C9E6F4;
+            @include font-size-rule;
+          }
+        }
+
+        .col {
+          a {
+
+            color: white;
+            text-decoration: none;
+            @include font-size-rule;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+
+
+    img {
+
+      max-width: 100px;
+    }
+  }
 }
 </style>

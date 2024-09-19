@@ -4,6 +4,6 @@
     color: $mainColor;
 }
 
-@mixin default-bg-color {
-    background-color: $mainColor;
+@mixin font-size-rule {
+    font-size: .8rem;
 }
