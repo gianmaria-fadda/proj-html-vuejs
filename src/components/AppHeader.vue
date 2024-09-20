@@ -76,7 +76,7 @@ header {
         .col {
           a {
 
-            color: white;
+            color: $whiteColor;
             @include text-decoration-none-rule;
             @include font-size-rule;
             padding: 0 10px;
