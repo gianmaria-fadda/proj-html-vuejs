@@ -15,7 +15,7 @@ export default {
             POPULAR POSTS
           </h6>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-55.jpg" alt="blog-55">
+            <img class="size-s" src="/public/img/blog-55.jpg" alt="blog-55">
 
             <section>
               <p>
@@ -27,7 +27,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-56.jpg" alt="blog-56">
+            <img class="size-s" src="/public/img/blog-56.jpg" alt="blog-56">
 
             <section>
               <p>
@@ -39,7 +39,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-57.jpg" alt="blog-57">
+            <img class="size-s" src="/public/img/blog-57.jpg" alt="blog-57">
 
             <section>
               <p>
@@ -51,7 +51,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-58.jpg" alt="blog-58">
+            <img class="size-s" src="/public/img/blog-58.jpg" alt="blog-58">
 
             <section>
               <p>
@@ -63,7 +63,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-59.jpg" alt="blog-59">
+            <img class="size-s" src="/public/img/blog-59.jpg" alt="blog-59">
 
             <section>
               <p>
@@ -80,7 +80,7 @@ export default {
             RECENT POSTS
           </h6>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-65.jpg" alt="blog-65">
+            <img class="size-s" src="/public/img/blog-65.jpg" alt="blog-65">
 
             <section>
               <p>
@@ -92,7 +92,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-66 (1).jpg" alt="blog-66">
+            <img class="size-s" src="/public/img/blog-66 (1).jpg" alt="blog-66">
 
             <section>
               <p>
@@ -104,7 +104,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-67.jpg" alt="blog-67">
+            <img class="size-s" src="/public/img/blog-67.jpg" alt="blog-67">
 
             <section>
               <p>
@@ -116,7 +116,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-68.jpg" alt="blog-68">
+            <img class="size-s" src="/public/img/blog-68.jpg" alt="blog-68">
 
             <section>
               <p>
@@ -128,7 +128,7 @@ export default {
             </section>
           </div>
           <div class="py-2">
-            <img class="size" src="/public/img/blog-69.jpg" alt="blog-69">
+            <img class="size-s" src="/public/img/blog-69.jpg" alt="blog-69">
 
             <section>
               <p>
@@ -145,16 +145,16 @@ export default {
             FEATURED POSTS
           </h6>
           <div>
-            <img class="size" src="" alt="">
+            <img class="size-m" src="/public/img/blog-66.jpg" alt="blog-66">
 
-            <section>
+            <div class="pos-abb">
+              <b>
+                RECIPES
+              </b>
               <p>
-
+                Amazingly Fresh Fruit And Herb Drink For Summer
               </p>
-              <p>
-
-              </p>
-            </section>
+            </div>
           </div>
         </div>
       </div>
@@ -173,10 +173,17 @@ export default {
     div {
 
       display: flex;
-      .size {
+      .size-s {
 
         width: 50px;
         height: 50px;
+      }
+
+      .size-m {
+
+        max-width: 100%;
+        filter: brightness(0.5);
+        opacity: .9;
       }
 
       p {
