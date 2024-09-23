@@ -307,6 +307,19 @@ export default {
   
                 <hr class="mb-5">
                 
+                <div class="d-flex justify-content-end">
+                  <i class="fa-solid fa-angle-left p-2 px-3 border text-primary"></i>
+                  <p class="mb-0 p-2 px-3 border-primary bg-primary text-white">
+                    1
+                  </p>
+                  <p class="mb-0 p-2 px-3 border text-primary">
+                    2
+                  </p>
+                  <p class="mb-0 p-2 px-3 border text-primary">
+                    3
+                  </p>
+                  <i class="fa-solid fa-angle-right p-2 px-3 border text-primary"></i>
+                </div>
               </div>
             </div>
           </div>
