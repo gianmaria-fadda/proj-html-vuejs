@@ -2,6 +2,7 @@
 import SezOneMain from './SezOneMain.vue';
 import SezTwoMain from './SezTwoMain.vue';
 import SezThreeMain from './SezThreeMain.vue';
+import SezFourMain from './SezFourMain.vue';
 
 export default {
   data() {
@@ -11,7 +12,8 @@ export default {
   components: {
     SezOneMain,
     SezTwoMain,
-    SezThreeMain
+    SezThreeMain,
+    SezFourMain
   }
 }
 </script>
@@ -24,6 +26,8 @@ export default {
     <SezTwoMain />
 
     <SezThreeMain />
+
+    <SezFourMain />
 
   </main>
 </template>
