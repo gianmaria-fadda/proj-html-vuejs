@@ -31,7 +31,7 @@ export default {
           </h6>
           <div class="row d-flex mb-3">
             <div class="col-3 px-0">
-              <img src="/public/img/our-office-4-square.jpg" alt="our-office-4-square">
+              <img class="rounded-circle" src="/public/img/our-office-4-square.jpg" alt="our-office-4-square">
             </div>
             <div class="col px-0 ps-2">
               <p class="text-light">
@@ -44,7 +44,7 @@ export default {
           </div>
           <div class="row d-flex">
             <div class="col-3 px-0">
-              <img src="/public/img/our-office-4-square.jpg" alt="our-office-4-square">
+              <img class="rounded-circle" src="/public/img/our-office-4-square.jpg" alt="our-office-4-square">
             </div>
             <div class="col px-0 ps-2">
               <p class="text-light">
@@ -111,9 +111,24 @@ export default {
     </div>
 
     <section>
-      <div class="row d-flex justify-content-between">
-        <div class="col"></div>
-        <div class="col"></div>
+      <div class="container">
+        <div class="row d-flex justify-content-between py-1">
+          <div class="col">
+            <img class="opacity-50 me-5" src="/public/img/logo-footer.png" alt="logo-footer">
+            <span class="text-secondary">&#169; Copyright 2020. All Right Reserved.</span>
+          </div>
+          <div class="col text-end">
+            <span class="text-secondary px-2">
+              &#8250; FAQ's
+            </span>
+            <span class="text-secondary px-2">
+              &#8250; Sitemap
+            </span>
+            <span class="text-secondary px-2">
+              &#8250; Contact Us
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   </footer>
@@ -164,13 +179,17 @@ footer {
   section {
 
     background-color: #1C2023;
-}
+    .text-secondary {
+      @include font-size-rule;
+
+    }
+  }
 }
 
 // GENERAL
 
 img {
   max-width: 75px;
-  border-radius: 50%;
+
 }
 </style>
