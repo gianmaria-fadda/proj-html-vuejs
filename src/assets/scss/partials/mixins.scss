@@ -7,3 +7,7 @@
 @mixin font-size-rule {
     font-size: .8rem;
 }
+
+@mixin pointer-rule {
+    cursor: pointer;
+}

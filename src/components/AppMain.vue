@@ -1,6 +1,7 @@
 <script>
 import SezOneMain from './SezOneMain.vue';
 import SezTwoMain from './SezTwoMain.vue';
+import SezThreeMain from './SezThreeMain.vue';
 
 export default {
   data() {
@@ -9,7 +10,8 @@ export default {
   },
   components: {
     SezOneMain,
-    SezTwoMain
+    SezTwoMain,
+    SezThreeMain
   }
 }
 </script>
@@ -21,14 +23,12 @@ export default {
 
     <SezTwoMain />
 
+    <SezThreeMain />
+
   </main>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
-main {
-
-
-}
 </style>

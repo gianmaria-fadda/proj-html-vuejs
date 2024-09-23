@@ -113,7 +113,7 @@ header {
 
     i {
 
-      cursor: pointer;
+      @include pointer-rule;
     }
   }
 }
