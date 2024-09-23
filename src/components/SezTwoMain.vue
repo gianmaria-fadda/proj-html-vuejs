@@ -10,7 +10,7 @@ export default {
 <template>
   <div class="container">
       <div class="row">
-        <div class="col-4 px-3">
+        <div class="col-4 px-3 py-5">
           <h6 class="text-start">
             POPULAR POSTS
           </h6>
@@ -75,7 +75,7 @@ export default {
             </section>
           </div>
         </div>
-        <div class="col-4 px-3">
+        <div class="col-4 px-3 py-5">
           <h6 class="text-start">
             RECENT POSTS
           </h6>
@@ -140,7 +140,7 @@ export default {
             </section>
           </div>
         </div>
-        <div class="col-4 px-3">
+        <div class="col-4 px-3 py-5">
           <h6 class="text-start">
             FEATURED POSTS
           </h6>
@@ -152,10 +152,28 @@ export default {
                 RECIPES
               </b>
               <p>
-                Amazingly Fresh Fruit And Herb Drink For Summer
+                Tips to Help You Quickly Prepare your Lunch
               </p>
             </div>
           </div>
+          <section class="col py-5">
+            <h6 class="text-start">
+              FEATURED POSTS
+            </h6>
+            <div>
+              <img src="/public/img/avatar.jpg" alt="avatar">
+              <section>
+                <p>
+                  John Dow
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Corporis eos iste voluptates adipisci, libero dignissimos
+                  voluptatum consequuntur.
+                </p>
+              </section>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -173,6 +191,7 @@ export default {
     div {
 
       display: flex;
+      position: relative;
       .size-s {
 
         width: 50px;
@@ -196,6 +215,59 @@ export default {
 
           color: grey;
           @include font-size-rule;
+        }
+      }
+      .pos-abb {
+
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 15px;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: start;
+        b {
+
+          font-size: .6rem;
+          color: $whiteColor;
+          background-color: $blueColor;
+          padding: 5px;
+          border-radius: 5px;
+        }
+
+        p {
+
+          font-weight: bold;
+          color: $whiteColor;
+          width: 88%;
+          padding-left: 0;
+        }
+      }
+    }
+
+    .col {
+
+      img {
+
+        max-width: 110px;
+        object-fit: contain;
+      }
+
+      div {
+
+        section {
+
+          padding-left: 20px;
+
+          p {
+
+            padding: 5px 0;
+
+            &:first-child {
+
+              font-weight: bold;
+            }
+          }
         }
       }
     }
