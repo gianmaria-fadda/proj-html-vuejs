@@ -8,11 +8,11 @@ export default {
 </script>
 
 <template>
-  <div class="d-flex justify-content-everly">
+  <div class="container d-flex justify-content-between">
     <section class="col-9">
-      <div class="container">
-        <div class="row justify-content-end ms-3">
-          <div class="col-10">
+      <div class="my-container">
+        <div class="row justify-content-start ms-3">
+          <div class="col-11">
             <img src="/public/img/blog-54.jpg" alt="blog-54">
             <div class="row d-flex pt-4">
               <div class="col-1">
@@ -68,7 +68,7 @@ export default {
             </div>
           </div>
   
-          <div class="col-10">
+          <div class="col-11">
             <img src="/public/img/blog-55 (1).jpg" alt="blog-55 (1)">
             <div class="row d-flex pt-4">
               <div class="col-1">
@@ -124,7 +124,7 @@ export default {
             </div>
           </div>
   
-          <div class="col-10">
+          <div class="col-11">
             <img src="/public/img/blog-56 (1).jpg" alt="blog-56 (1)">
             <div class="row d-flex pt-4">
               <div class="col-1">
@@ -180,7 +180,7 @@ export default {
             </div>
           </div>
   
-          <div class="col-10">
+          <div class="col-11">
             <img src="/public/img/blog-58 (1).jpg" alt="blog-58 (1)">
             <div class="row d-flex pt-4">
               <div class="col-1">
@@ -236,7 +236,7 @@ export default {
             </div>
           </div>
   
-          <div class="col-10">
+          <div class="col-11">
             <div class="row px-2">
               <div class="col-4 px-0">
                 <img class="object-fit-contain" src="/public/img/blog-13.jpg" alt="blog-13">
@@ -326,7 +326,7 @@ export default {
         </div>
       </div>
     </section>
-    <aside class="col-2">
+    <aside class="col-3">
       <div class="container">
         <div class="row">
           <div class="col-12 pt-5">
@@ -396,7 +396,6 @@ export default {
         </div>
       </div>
     </aside>
-
   </div>
 </template>
 
@@ -408,11 +407,11 @@ div {
   section {
     padding: 50px 0;
   
-    .container {
+    .my-container {
   
       .row {
   
-        .col-10 {
+        .col-11 {
   
           img {
   
