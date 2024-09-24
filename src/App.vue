@@ -75,7 +75,7 @@ export default {
 
 <template>
     <!-- 3) Utilizzo del componente -->
-    <AppHeader :menu-items="headerItems" :header-img="headerImg" />
+    <AppHeader :menu-items-one="headerItemsOne" :menu-items-two="headerItemsTwo" :header-img="headerImg" />
 
     <AppMain />
 

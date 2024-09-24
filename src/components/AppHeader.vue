@@ -1,24 +1,9 @@
 <script>
 export default {
-  data() {
-    return {
-      headerImg: '/public/img/logo-default-slim.png',
-      headerItemsOne: [
-        { name: 'SIGN IN', link: '#' },
-        { name: 'ABOUT US', link: '#' },
-        { name: 'CONTACT US', link: '#' },
-        { name: 'BUY NOW', link: '#' }
-      ],
-      headerItemsTwo: [
-        { name: 'HOME', link: '#' },
-        { name: 'ELEMENTS', link: '#' },
-        { name: 'FEATURES', link: '#' },
-        { name: 'PAGES', link: '#' },
-        { name: 'PORTFOLIO', link: '#' },
-        { name: 'BLOG', link: '#' },
-        { name: 'SHOP', link: '#' }
-      ]
-    }
+  props: {
+    headerImg: String,
+    menuItemsOne: Object,
+    menuItemsTwo: Object
   }
 }
 </script>
@@ -34,7 +19,7 @@ export default {
             </p>
           </div>
           <div class="col ps-0">
-            <a v-for="(link, i) in headerItemsOne" key="i" class="ps-0" href="#">{{ link.name }}</a>
+            <a v-for="(link, i) in menuItemsOne" key="i" class="ps-0" href="#">{{ link.name }}</a>
           </div>
         </div>
       </div>
@@ -48,7 +33,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col pb-3">
-          <a v-for="(link, i) in headerItemsTwo" key="i" class="ps-0" href="#">{{ link.name }}</a>
+          <a v-for="(link, i) in menuItemsTwo" key="i" class="ps-0" href="#">{{ link.name }}</a>
         </div>
         <div class="col text-end">
           <i class="fa-solid fa-magnifying-glass"></i>  
