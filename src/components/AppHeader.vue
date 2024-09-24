@@ -2,6 +2,22 @@
 export default {
   data() {
     return {
+      headerImg: '/public/img/logo-default-slim.png',
+      headerItemsOne: [
+        { name: 'SIGN IN', link: '#' },
+        { name: 'ABOUT US', link: '#' },
+        { name: 'CONTACT US', link: '#' },
+        { name: 'BUY NOW', link: '#' }
+      ],
+      headerItemsTwo: [
+        { name: 'HOME', link: '#' },
+        { name: 'ELEMENTS', link: '#' },
+        { name: 'FEATURES', link: '#' },
+        { name: 'PAGES', link: '#' },
+        { name: 'PORTFOLIO', link: '#' },
+        { name: 'BLOG', link: '#' },
+        { name: 'SHOP', link: '#' }
+      ]
     }
   }
 }
@@ -18,16 +34,13 @@ export default {
             </p>
           </div>
           <div class="col ps-0">
-            <a class="ps-0" href="#">SIGN IN</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">CONTACT US</a>
-            <a href="#">BUY NOW</a>
+            <a v-for="(link, i) in headerItemsOne" key="i" class="ps-0" href="#">{{ link.name }}</a>
           </div>
         </div>
       </div>
     </div>
     <div class="container py-4">
-      <img src="/public/img/logo-default-slim.png" alt="logo-default-slim">
+      <img :src="headerImg" alt="logo-default-slim">
     </div>
 
     <hr class="text-body-secondary">
@@ -35,13 +48,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col pb-3">
-          <a class="ps-0" href="#">HOME</a>
-          <a href="#">ELEMENTS</a>
-          <a href="#">FEATURES</a>
-          <a href="#">PAGES</a>
-          <a href="#">PORTFOLIO</a>
-          <a href="#">BLOG</a>
-          <a href="#">SHOP</a>
+          <a v-for="(link, i) in headerItemsTwo" key="i" class="ps-0" href="#">{{ link.name }}</a>
         </div>
         <div class="col text-end">
           <i class="fa-solid fa-magnifying-glass"></i>  

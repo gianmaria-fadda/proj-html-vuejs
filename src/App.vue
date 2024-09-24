@@ -13,70 +13,55 @@ import AppFooter from './components/AppFooter.vue';
 export default {
   data() {
     return {
-      headerItems: [
-        { name: 'HOME', 
-          link: '#' 
-        },
-        { name: 'ELEMENTS', 
-          link: '#' 
-        },
-        { name: 'FEATURES', 
-          link: '#' 
-        },
-        { name: 'PAGES', 
-          link: '#' 
-        },
-        { name: 'PORTFOLIO', 
-          link: '#' 
-        },
-        { name: 'BLOG', 
-          link: '#'  
-        },
-        { name: 'SHOP', 
-          link: '#' 
-        },
+      headerImg: '/public/img/logo-default-slim.png',
+      headerItemsOne: [
+        { name: 'SIGN IN', link: '#' },
+        { name: 'ABOUT US', link: '#' },
+        { name: 'CONTACT US', link: '#' },
+        { name: 'BUY NOW', link: '#' }
       ],
+      headerItemsTwo: [
+        { name: 'HOME', link: '#' },
+        { name: 'ELEMENTS', link: '#' },
+        { name: 'FEATURES', link: '#' },
+        { name: 'PAGES', link: '#' },
+        { name: 'PORTFOLIO', link: '#' },
+        { name: 'BLOG', link: '#' },
+        { name: 'SHOP', link: '#' }
+      ],
+      footerImg: '/public/img/logo-footer.png',
       footerItems: [
-        { name: 'ABOUT THE VLOG', 
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.', 
-          link: '#' 
+        {
+          name: 'ABOUT THE VLOG', 
+          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.',
+          img: '/public/img/our-office-4-square.jpg',
+          link: '#'
         },
-        { name: 'RECENT POSTS', 
-          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.', 
-          link: '#' 
+        {
+          name: 'RECENT POSTS',
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.',
+          img: '/public/img/our-office-5-square.jpg',
+          link: '#'
         },
-        { name: 'RECENT COMMENTS', 
-          content: 'Lorem ipsum dolor sit amet.', 
-          link: '#' 
+        {
+          name: 'RECENT COMMENTS',
+          content: 'Lorem ipsum dolor sit amet.',
+          link: '#'
         },
-        { name: 'CATEGORIES', 
-          categories: ['GADGETS', 
-                       'PHOTOGRAPHY', 
-                       'LIFESTYLE', 
-                       'FASHION', 
-                       'RECIPES', 
-                       'TRAVEL', 
-                       'BUSINESS', 
-                       'ARCHITECTURE', 
-                       'REVIEWS', 
-                       'SPORTS', 
-                       'VIDEOS', 
-                       'TECHNOLOGY', 
-                       'DESIGN'
-                      ], 
-          link: '#' 
+        {
+          name: 'CATEGORIES',
+          categories: [
+            'GADGETS', 'PHOTOGRAPHY', 'LIFESTYLE', 'FASHION', 'RECIPES',
+            'TRAVEL', 'BUSINESS', 'ARCHITECTURE', 'REVIEWS', 'SPORTS', 
+            'VIDEOS', 'TECHNOLOGY', 'DESIGN'
+          ],
+          link: '#'
         },
-        { name: 'FAQ\'s', 
-          link: '#' 
-        },
-        { name: 'Sitemap', 
-          link: '#' 
-        },
-        { name: 'Contact Us', 
-          link: '#' 
-        },
+        { name: 'FAQ\'s', link: '#' },
+        { name: 'Sitemap', link: '#' },
+        { name: 'Contact Us', link: '#' },
       ]
-    }
+    };
   },
   // 2) Dichiarazione del componente
   components: {
@@ -91,11 +76,11 @@ export default {
 
 <template>
     <!-- 3) Utilizzo del componente -->
-    <AppHeader />
+    <AppHeader :menu-items="headerItems" :header-img="headerImg" />
 
     <AppMain />
 
-    <AppFooter />
+    <AppFooter :menu-items="footerItems" :footer-img="footerImg" />
 
 </template>
 
