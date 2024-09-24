@@ -13,6 +13,69 @@ import AppFooter from './components/AppFooter.vue';
 export default {
   data() {
     return {
+      headerItems: [
+        { name: 'HOME', 
+          link: '#' 
+        },
+        { name: 'ELEMENTS', 
+          link: '#' 
+        },
+        { name: 'FEATURES', 
+          link: '#' 
+        },
+        { name: 'PAGES', 
+          link: '#' 
+        },
+        { name: 'PORTFOLIO', 
+          link: '#' 
+        },
+        { name: 'BLOG', 
+          link: '#'  
+        },
+        { name: 'SHOP', 
+          link: '#' 
+        },
+      ],
+      footerItems: [
+        { name: 'ABOUT THE VLOG', 
+          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.', 
+          link: '#' 
+        },
+        { name: 'RECENT POSTS', 
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.', 
+          link: '#' 
+        },
+        { name: 'RECENT COMMENTS', 
+          content: 'Lorem ipsum dolor sit amet.', 
+          link: '#' 
+        },
+        { name: 'CATEGORIES', 
+          categories: ['GADGETS', 
+                       'PHOTOGRAPHY', 
+                       'LIFESTYLE', 
+                       'FASHION', 
+                       'RECIPES', 
+                       'TRAVEL', 
+                       'BUSINESS', 
+                       'ARCHITECTURE', 
+                       'REVIEWS', 
+                       'SPORTS', 
+                       'VIDEOS', 
+                       'TECHNOLOGY', 
+                       'DESIGN'
+                      ], 
+          link: '#' 
+        },
+        { name: 'FAQ\'s', 
+          link: '#' 
+        },
+        { name: 'Sitemap', 
+          link: '#' 
+        },
+        { name: 'Contact Us', 
+          link: '#' 
+        },
+      ]
     }
   },
   // 2) Dichiarazione del componente
