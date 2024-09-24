@@ -2,6 +2,37 @@
 export default {
   data() {
     return {
+      footerImg: '/public/img/logo-footer.png',
+      footerItems: [
+        {
+          name: 'ABOUT THE VLOG', 
+          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.'
+        },
+        {
+          name: 'RECENT POSTS',
+          content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.',
+          time: '12:53 AM Dec 19th.',
+          img: ['/img/our-office-4-square.jpg', '/img/our-office-5-square.jpg'],
+          link: '#'
+        },
+        {
+          name: 'RECENT COMMENTS',
+          content: 'Lorem ipsum dolor sit amet.',
+          link: '#'
+        },
+        {
+          name: 'CATEGORIES',
+          categories: [
+            'GADGETS', 'PHOTOGRAPHY', 'LIFESTYLE', 'FASHION', 'RECIPES',
+            'TRAVEL', 'BUSINESS', 'ARCHITECTURE', 'REVIEWS', 'SPORTS', 
+            'VIDEOS', 'TECHNOLOGY', 'DESIGN'
+          ],
+          link: '#'
+        },
+        { name: 'FAQ\'s' },
+        { name: 'Sitemap' },
+        { name: 'Contact Us' },
+      ]
     }
   }
 }
@@ -13,13 +44,10 @@ export default {
       <div class="row">
         <div class="col-4">
           <h6 class="text-white mb-4">
-            ABOUT THE VLOG
+            {{ footerItems[0].name }}
           </h6>
-          <p class="text-secondary">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.
-          </p>
-          <p class="text-secondary">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam doloribus nemo sapiente...
+          <p v-for="x in 2" class="text-secondary">
+            {{ footerItems[0].content }}
           </p>
           <h6 class="text-white mb-4">
             VIEW MORE <span class="fs-5 ps-1">&#8250;</span>
@@ -27,38 +55,38 @@ export default {
         </div>
         <div class="col-3">
           <h6 class="text-white mb-4">
-            RECENT POSTS
+            {{ footerItems[1].name }}
           </h6>
           <div class="row d-flex mb-3">
             <div class="col-3 px-0">
-              <img class="rounded-circle" src="/public/img/our-office-4-square.jpg" alt="our-office-4-square">
+              <img class="rounded-circle" :src="footerItems[1].img[0]" :alt="footerItems[1].name">
             </div>
             <div class="col px-0 ps-2">
               <p class="text-light">
-                Lorem ipsum dolor sit, amet consectetur adipisicing.
+                {{ footerItems[1].content }}
               </p>
               <p class="text-secondary">
-                12:53 AM Dec 19th
+                {{ footerItems[1].time }}
               </p>
             </div>
           </div>
           <div class="row d-flex">
             <div class="col-3 px-0">
-              <img class="rounded-circle" src="/public/img/our-office-4-square.jpg" alt="our-office-4-square">
+              <img class="rounded-circle" :src="footerItems[1].img[1]" :alt="footerItems[1].name">
             </div>
             <div class="col px-0 ps-2">
               <p class="text-light">
-                Lorem ipsum dolor sit, amet consectetur adipisicing.
+                {{ footerItems[1].content }}
               </p>
               <p class="text-secondary">
-                12:53 AM Dec 19th
+                {{ footerItems[1].time }}
               </p>
             </div>
           </div>
         </div>
         <div class="col-3">
           <h6 class="text-white mb-4">
-            RECENT COMMENTS
+            {{ footerItems[2].name }}
           </h6>
           <div>
             <span class="fs-6 text-primary">&#8250;</span>
@@ -68,9 +96,9 @@ export default {
             <span class="text-white mb-0">
               commented on 
             </span>
-            <span class="fs-6 text-primary">Lorem ipsum dolor sit amet.</span>
+            <span class="fs-6 text-primary">{{ footerItems[2].content }}</span>
             <p class="text-secondary mt-3">
-              12:53 AM Dec 19th
+              {{ footerItems[1].time }}
             </p>
           </div>
           <div>
@@ -81,7 +109,7 @@ export default {
             <span class="text-white mb-0">
               commented on 
             </span>
-            <span class="fs-6 text-primary">Lorem ipsum dolor sit amet.</span>
+            <span class="fs-6 text-primary">{{ footerItems[2].content }}</span>
             <p class="text-secondary mt-3">
               12:53 AM Dec 19th
             </p>
@@ -89,22 +117,10 @@ export default {
         </div>
         <div class="col-2">
           <h6 class="text-white mb-4">
-            CATEGORIES
+            {{ footerItems[3].name }}
           </h6>
           <div>
-            <p class="bg-black text-white fw-bold rounded-1">GADGETS</p>
-            <p class="bg-black text-white fw-bold rounded-1">PHOTOGRAPHY</p>
-            <p class="bg-black text-white fw-bold rounded-1">LIFESTYLE</p>
-            <p class="bg-black text-white fw-bold rounded-1">FASHION</p>
-            <p class="bg-black text-white fw-bold rounded-1">RECIPES</p>
-            <p class="bg-black text-white fw-bold rounded-1">TRAVEL</p>
-            <p class="bg-black text-white fw-bold rounded-1">BUSINESS</p>
-            <p class="bg-black text-white fw-bold rounded-1">ARCHITECTURE</p>
-            <p class="bg-black text-white fw-bold rounded-1">REVIEVS</p>
-            <p class="bg-black text-white fw-bold rounded-1">SPORTS</p>
-            <p class="bg-black text-white fw-bold rounded-1">VIDEOS</p>
-            <p class="bg-black text-white fw-bold rounded-1">TECHNOLOGY</p>
-            <p class="bg-black text-white fw-bold rounded-1">DESIGN</p>
+            <p v-for="(category, i) in footerItems[3].categories" :key="i" class="bg-black text-white fw-bold rounded-1">{{ category }}</p>
           </div>
         </div>
       </div>
@@ -119,13 +135,13 @@ export default {
           </div>
           <div class="col text-end">
             <span class="text-secondary px-2">
-              &#8250; FAQ's
+              &#8250; {{ footerItems[4].name }}
             </span>
             <span class="text-secondary px-2">
-              &#8250; Sitemap
+              &#8250; {{ footerItems[5].name }}
             </span>
             <span class="text-secondary px-2">
-              &#8250; Contact Us
+              &#8250; {{ footerItems[6].name }}
             </span>
           </div>
         </div>

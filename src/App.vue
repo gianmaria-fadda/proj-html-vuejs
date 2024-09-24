@@ -33,14 +33,13 @@ export default {
       footerItems: [
         {
           name: 'ABOUT THE VLOG', 
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.',
-          img: '/public/img/our-office-4-square.jpg',
-          link: '#'
+          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus sapiente.'
         },
         {
           name: 'RECENT POSTS',
           content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.',
-          img: '/public/img/our-office-5-square.jpg',
+          time: '12:53 AM Dec 19th.',
+          img: ['/img/our-office-4-square.jpg', '/img/our-office-5-square.jpg'],
           link: '#'
         },
         {
@@ -57,9 +56,9 @@ export default {
           ],
           link: '#'
         },
-        { name: 'FAQ\'s', link: '#' },
-        { name: 'Sitemap', link: '#' },
-        { name: 'Contact Us', link: '#' },
+        { name: 'FAQ\'s' },
+        { name: 'Sitemap' },
+        { name: 'Contact Us' },
       ]
     };
   },
